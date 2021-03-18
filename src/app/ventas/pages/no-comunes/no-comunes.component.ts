@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -42,5 +43,42 @@ export class NoComunesComponent {
     // Actualizar array
     this.clientes.pop();
   }
+
+
+  //
+  // keyValuePipe
+  persona = {
+    nombre: 'Marcos',
+    edad: 28,
+    direccion: 'Valencia, España'
+  }
+
+  // JSON Pipe
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true
+    },
+    {
+      nombre: 'Batman',
+      vuela: true
+    },
+    {
+      nombre: 'Robin',
+      vuela: false
+    }
+  ]
+
+
+  // Async Pipe
+  miObservable = interval(5000);
+
+
+  // con una promesa
+  valorPromesa = new Promise( ( resolve, reject ) => {
+    setTimeout(() => {
+      resolve( 'Tengo datos de promesa' );
+    }, 3500);
+  });
 
 }
