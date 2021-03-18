@@ -7,11 +7,14 @@ import { BasicosComponent } from './pages/basicos/basicos.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
 // Modulo propio
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { MayusculasPipe } from './pipes/mayusculas.pipe';
+import { VuelaPipe } from './pipes/vuela.pipe';
+import { OrdenarPorPipe } from './pipes/ordenar-por.pipe';
 
 
 
 @NgModule({
-  declarations: [NumerosComponent, NoComunesComponent, BasicosComponent, OrdenarComponent],
+  declarations: [NumerosComponent, NoComunesComponent, BasicosComponent, OrdenarComponent, MayusculasPipe, VuelaPipe, OrdenarPorPipe],
   exports:[
     NumerosComponent, NoComunesComponent, BasicosComponent, OrdenarComponent
   ],
